@@ -410,6 +410,173 @@ h1 .title {
   color: var(--ink-700);
 }
 
+.tiktok {
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(252, 224, 236, 0.8));
+}
+
+.tiktok-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tiktok-card {
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.86);
+  padding: 10px;
+  min-height: 280px;
+}
+
+.tiktok-card .tiktok-embed {
+  margin: 0 !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+.tiktok-note {
+  margin-top: 12px;
+  color: var(--ink-700);
+  font-size: 0.9rem;
+}
+
+.partnerships {
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.92), rgba(252, 226, 238, 0.82));
+}
+
+.partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.partnership-card {
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 18px;
+}
+
+.partnership-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 7px;
+}
+
+.partnership-card p {
+  color: var(--ink-700);
+}
+
+.partnership-card ul {
+  margin-top: 10px;
+  padding-left: 18px;
+  color: var(--ink-700);
+  display: grid;
+  gap: 6px;
+}
+
+.partnership-cta {
+  margin-top: 12px;
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.partnership-cta h3 {
+  font-size: 1.22rem;
+  margin-bottom: 6px;
+}
+
+.partnership-cta p {
+  color: var(--ink-700);
+}
+
+.brand-evidence-wrap {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.brand-evidence-card {
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+}
+
+.brand-evidence-card h3 {
+  font-size: 1.16rem;
+  margin-bottom: 6px;
+}
+
+.brand-evidence-card p {
+  color: var(--ink-700);
+}
+
+.brand-pill-row {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brand-pill {
+  border: 1px solid var(--pink-200);
+  border-radius: 999px;
+  background: #fff6fa;
+  color: var(--pink-500);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 6px 10px;
+}
+
+.profile-intel {
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(252, 229, 240, 0.84));
+}
+
+.intel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.intel-card {
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 16px;
+}
+
+.intel-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.intel-card ul {
+  padding-left: 18px;
+  color: var(--ink-700);
+  display: grid;
+  gap: 6px;
+}
+
+.intel-note {
+  margin-top: 12px;
+  color: var(--ink-700);
+  font-size: 0.9rem;
+}
+
 .numbers-card {
   border: 1px solid var(--pink-200);
   border-radius: var(--radius-lg);
@@ -555,6 +722,22 @@ h1 .title {
   .connect-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .tiktok-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partnership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-evidence-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .intel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
@@ -610,6 +793,15 @@ h1 .title {
     align-items: center;
     text-align: center;
   }
+
+  .partnership-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .intel-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 620px) {
@@ -619,6 +811,10 @@ h1 .title {
   }
 
   .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tiktok-grid {
     grid-template-columns: 1fr;
   }
 }
