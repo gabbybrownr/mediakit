@@ -240,27 +240,34 @@ h1 .title {
   flex-wrap: wrap;
 }
 
-.btn {
+.coq-btn {
   text-decoration: none;
   border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 11px 18px;
   font-weight: 800;
   font-size: 0.92rem;
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+  position: static;
+  float: none;
+  clear: none;
+  white-space: nowrap;
 }
 
-.btn:hover,
-.btn:focus-visible {
+.coq-btn:hover,
+.coq-btn:focus-visible {
   transform: translateY(-2px);
 }
 
-.btn-solid {
+.coq-btn-solid {
   color: #fff;
   background: linear-gradient(135deg, var(--pink-400), var(--pink-500));
   box-shadow: 0 12px 24px rgba(211, 93, 142, 0.35);
 }
 
-.btn-ghost {
+.coq-btn-ghost {
   color: var(--pink-500);
   border: 1px solid var(--pink-200);
   background: rgba(255, 255, 255, 0.75);
@@ -487,7 +494,9 @@ h1 .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
+  isolation: isolate;
 }
 
 .partnership-cta h3 {
@@ -497,6 +506,10 @@ h1 .title {
 
 .partnership-cta p {
   color: var(--ink-700);
+}
+
+.partnership-cta .coq-btn {
+  margin-left: auto;
 }
 
 .brand-evidence-wrap {
@@ -797,6 +810,10 @@ h1 .title {
   .partnership-cta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .partnership-cta .coq-btn {
+    margin-left: 0;
   }
 
   .intel-grid {
