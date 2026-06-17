@@ -597,6 +597,25 @@ h1 .title {
   padding: 18px;
 }
 
+.numbers.snapshot-inline {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.numbers.snapshot-inline .numbers-card {
+  padding: 14px;
+}
+
+.numbers.snapshot-inline h2 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+
+.numbers.snapshot-inline .metrics > div {
+  padding: 12px;
+}
+
 .numbers-card h2 {
   font-size: 1.55rem;
   margin-bottom: 14px;
@@ -799,6 +818,10 @@ h1 .title {
 
   .metrics {
     grid-template-columns: 1fr;
+  }
+
+  .numbers.snapshot-inline {
+    padding: 10px;
   }
 
   .site-footer {
