@@ -673,7 +673,7 @@ h1 .title {
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -820,6 +820,10 @@ h1 .title {
     grid-template-columns: 1fr;
   }
 
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .mood-card,
   .mood-card.large {
     grid-column: span 6;
@@ -891,7 +895,7 @@ h1 .title {
   }
 
   .metrics {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .numbers.snapshot-inline {
@@ -919,6 +923,10 @@ h1 .title {
 }
 
 @media (max-width: 620px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
   .mood-card,
   .mood-card.large {
     grid-column: span 12;
