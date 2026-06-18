@@ -3,10 +3,6 @@ const siteNav = document.querySelector('.site-nav');
 const revealSections = document.querySelectorAll('.section-reveal');
 const metricNodes = document.querySelectorAll('.metric[data-target]');
 const navLinks = document.querySelectorAll('.site-nav a[href^="#"]');
-const sliderTrack = document.querySelector('.hero-slider-track');
-const sliderPrev = document.querySelector('.slider-prev');
-const sliderNext = document.querySelector('.slider-next');
-const sliderCaption = document.querySelector('#slider-caption');
 
 if (menuButton && siteNav) {
   menuButton.addEventListener('click', () => {
@@ -21,31 +17,6 @@ if (menuButton && siteNav) {
       siteNav.classList.remove('open');
     });
   });
-}
-
-if (sliderTrack && sliderPrev && sliderNext) {
-  const slides = Array.from(sliderTrack.querySelectorAll('.gabby-photo'));
-  let activeSlide = 0;
-
-  function showSlide(index) {
-    activeSlide = (index + slides.length) % slides.length;
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle('active', slideIndex === activeSlide);
-    });
-    if (sliderCaption) {
-      sliderCaption.textContent = slides[activeSlide].dataset.caption || slides[activeSlide].alt;
-    }
-  }
-
-  sliderPrev.addEventListener('click', () => {
-    showSlide(activeSlide - 1);
-  });
-
-  sliderNext.addEventListener('click', () => {
-    showSlide(activeSlide + 1);
-  });
-
-  showSlide(0);
 }
 
 const revealObserver = new IntersectionObserver(
