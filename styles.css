@@ -703,6 +703,10 @@ h1 .title {
   margin-top: 2px;
 }
 
+.metric-male {
+  color: #89bfdf !important;
+}
+
 .connect-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
