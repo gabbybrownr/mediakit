@@ -100,7 +100,7 @@
     .video-grid {
       margin-top: 14px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 10px;
     }
 
@@ -122,6 +122,12 @@
       margin: 0 !important;
       min-width: 100% !important;
       max-width: 100% !important;
+    }
+
+    @media (max-width: 1100px) {
+      .video-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 980px) {
@@ -157,49 +163,71 @@
       "dress-diaries": {
         title: "Dress Diaries",
         videos: [
-          { id: "7504461138743119135", views: "638.6K views", label: "Pinned high-view dress haul" },
-          { id: "7647699747846802719", views: "10.2K views", label: "LaceMade dress styling" },
-          { id: "7644378509011340574", views: "8.8K views", label: "Long dress try-on haul" }
+          { id: "7504461138743119135", views: "638.6K views", label: "Birthday dress haul — LaceMade, SHEIN & TEMU" },
+          { id: "7621332280509828383", views: "24.7K views",  label: "SHEIN spring dresses try-on" },
+          { id: "7643968802933198111", views: "26.2K views",  label: "Summer SHEIN haul — beach & mermaid vibes" },
+          { id: "7646958464853396767", views: "12.7K views",  label: "SHEIN vacation dress summer styling" },
+          { id: "7649133498279791903", views: "13.4K views",  label: "SHEIN birthday dress haul — princess picks" },
+          { id: "7644321950008970527", views: "10.4K views",  label: "SHEIN GlowMode sets outfit styling" },
+          { id: "7647699747846802719", views: "10.2K views",  label: "LaceMade princess dress haul" },
+          { id: "7644378509011340574", views: "8.8K views",   label: "PinkBlush maxi dress try-on haul" },
+          { id: "7651757456711748895", views: "4.3K views",   label: "300 dresses closet — only 3 pants" },
+          { id: "7652154014557097246", views: "2.9K views",   label: "PinkBlush dress styling for occasions" }
         ]
       },
       "thrift-treasure": {
         title: "Thrift Treasure",
         videos: [
-          { id: "7649543714284637471", views: "3.5K views", label: "Thrift with me episode" },
-          { id: "7646166981535599903", views: "2.6K views", label: "Girly shopping haul" },
-          { id: "7652154014557097246", views: "2.8K views", label: "Closet and thrift styling" }
+          { id: "7649543714284637471", views: "3.6K views",   label: "Thrift with me — Goodwill color palette finds" },
+          { id: "7646166981535599903", views: "2.7K views",   label: "Girly haul — Costa Rica boutique finds" },
+          { id: "7645808378064719134", views: "3.5K views",   label: "LaceMade princess dress — vintage lace find" },
+          { id: "7645124710027644191", views: "4.1K views",   label: "LaceMade birthday dress haul" },
+          { id: "7651757456711748895", views: "4.3K views",   label: "Closet tour — feminine dress collection" }
         ]
       },
       "princess-parties": {
         title: "Princess Parties",
         videos: [
-          { id: "7505909339182353695", views: "115.9K views", label: "Pinned pink picnic birthday" },
-          { id: "7649133498279791903", views: "13.4K views", label: "Birthday gifts haul" },
-          { id: "7650283305430011166", views: "12.6K views", label: "Birthday feminine haul" }
+          { id: "7505909339182353695", views: "115.9K views", label: "Garden picnic birthday — Bridgerton aesthetic" },
+          { id: "7504461138743119135", views: "638.6K views", label: "Birthday dress haul Pt.3 — princess fairy picks" },
+          { id: "7649133498279791903", views: "13.4K views",  label: "SHEIN birthday gifts haul — princess theme" },
+          { id: "7650283305430011166", views: "12.6K views",  label: "SHEIN feminine birthday haul" },
+          { id: "7645808378064719134", views: "3.5K views",   label: "LaceMade vintage princess dress" },
+          { id: "7645124710027644191", views: "4.1K views",   label: "LaceMade birthday dress worn at my party" }
         ]
       },
       "girly-lifestyle": {
         title: "Girly Lifestyle",
         videos: [
-          { id: "7643968802933198111", views: "26.2K views", label: "Summer lifestyle haul" },
-          { id: "7621332280509828383", views: "24.7K views", label: "Spring dresses lifestyle" },
-          { id: "7652533132226317599", views: "10.6K views", label: "Princess pajama routine" }
+          { id: "7643968802933198111", views: "26.2K views",  label: "Summer SHEIN haul — beach mermaid lifestyle" },
+          { id: "7621332280509828383", views: "24.7K views",  label: "SHEIN spring dresses — everyday feminine looks" },
+          { id: "7651787353052187918", views: "12.5K views",  label: "SHEIN pink top — favorite daily wear" },
+          { id: "7652533132226317599", views: "10.6K views",  label: "SHEIN PalaceNights princess pajama routine" },
+          { id: "7644321950008970527", views: "10.4K views",  label: "SHEIN GlowMode gym sets" },
+          { id: "7649017727415373087", views: "1.2K views",   label: "Wildflower Cases — new mermaid phone case" }
         ]
       },
       "closet-color-stories": {
         title: "Closet Color Stories",
         videos: [
-          { id: "7652154014557097246", views: "2.8K views", label: "Closet dress combinations" },
-          { id: "7651787353052187918", views: "12.5K views", label: "Pink tops and outfit palette" },
-          { id: "7646958464853396767", views: "12.7K views", label: "Summer palette dress picks" }
+          { id: "7504461138743119135", views: "638.6K views", label: "Dress haul — coquette floral palette" },
+          { id: "7646958464853396767", views: "12.7K views",  label: "SHEIN summer vacation dress palette" },
+          { id: "7651787353052187918", views: "12.5K views",  label: "Pink SHEIN top — color story everyday" },
+          { id: "7646166981535599903", views: "2.7K views",   label: "Costa Rica haul — feminine color palette" },
+          { id: "7644378509011340574", views: "8.8K views",   label: "PinkBlush floral maxi dresses color story" },
+          { id: "7651757456711748895", views: "4.3K views",   label: "300 dress closet palette tour" },
+          { id: "7652154014557097246", views: "2.9K views",   label: "PinkBlush occasion dresses — color variety" }
         ]
       },
       "orlando-vlog-notes": {
         title: "Orlando Vlog Notes",
         videos: [
-          { id: "7505909339182353695", views: "115.9K views", label: "Garden picnic day vlog" },
-          { id: "7649017727415373087", views: "1.2K views", label: "Creator day style note" },
-          { id: "7646166981535599903", views: "2.6K views", label: "Outings and shopping notes" }
+          { id: "7505909339182353695", views: "115.9K views", label: "Garden picnic birthday vlog — Orlando" },
+          { id: "7621332280509828383", views: "24.7K views",  label: "Spring SHEIN dresses — Orlando lifestyle" },
+          { id: "7643968802933198111", views: "26.2K views",  label: "Summer beach haul — Orlando mermaid vibes" },
+          { id: "7650283305430011166", views: "12.6K views",  label: "Birthday haul Orlando — feminine SHEIN" },
+          { id: "7649017727415373087", views: "1.2K views",   label: "New phone case — creator day in Orlando" },
+          { id: "7646166981535599903", views: "2.7K views",   label: "Shopping day — Costa Rica travel content" }
         ]
       }
     };
