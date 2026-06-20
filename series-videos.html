@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Series Topic Videos | Gabby Brown</title>
+  <meta name="description" content="Preview top TikTok videos for each Feminine Fashion Series topic.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-a: #f9d7e3;
+      --bg-b: #fff6fa;
+      --ink: #672f4c;
+      --ink-soft: #8e4d70;
+      --line: rgba(198, 108, 149, 0.28);
+      --card: rgba(255, 255, 255, 0.86);
+      --title: #7f2d56;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 10% 0%, var(--bg-a), var(--bg-b) 55%);
+    }
+
+    .wrap {
+      width: min(1100px, 94vw);
+      margin: 18px auto 36px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .bar,
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--card);
+      box-shadow: 0 14px 34px rgba(198, 108, 149, 0.16);
+    }
+
+    .bar {
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: var(--title);
+      font-family: "Playfair Display", serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+    }
+
+    .back {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-weight: 700;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .panel {
+      padding: clamp(16px, 2.8vw, 24px);
+    }
+
+    .kicker {
+      margin: 0 0 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.74rem;
+      color: #be4f7f;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      color: var(--title);
+      font-size: clamp(1.55rem, 4vw, 2.4rem);
+    }
+
+    .desc {
+      margin: 10px 0 0;
+      color: var(--ink-soft);
+      max-width: 70ch;
+    }
+
+    .video-grid {
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .video-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 10px;
+    }
+
+    .video-meta {
+      margin: 0 0 8px;
+      color: var(--ink-soft);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .tiktok-embed {
+      margin: 0 !important;
+      min-width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    @media (max-width: 980px) {
+      .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="bar">
+      <a class="brand" href="index.html#top">Gabby Brown</a>
+      <a class="back" href="index.html#story">Back to series</a>
+    </header>
+
+    <main class="panel">
+      <p class="kicker">Series Video Preview</p>
+      <h1 id="topic-title">Femenine Fashion Series</h1>
+      <p class="desc">Top-view TikTok picks for this topic. Tap any card to open the video directly on TikTok.</p>
+      <section id="video-grid" class="video-grid" aria-label="Topic video previews"></section>
+    </main>
+  </div>
+
+  <script>
+    const topicData = {
+      "dress-diaries": {
+        title: "Dress Diaries",
+        videos: [
+          { id: "7504461138743119135", views: "638.6K views", label: "Pinned high-view dress haul" },
+          { id: "7647699747846802719", views: "10.2K views", label: "LaceMade dress styling" },
+          { id: "7644378509011340574", views: "8.8K views", label: "Long dress try-on haul" }
+        ]
+      },
+      "thrift-treasure": {
+        title: "Thrift Treasure",
+        videos: [
+          { id: "7649543714284637471", views: "3.5K views", label: "Thrift with me episode" },
+          { id: "7646166981535599903", views: "2.6K views", label: "Girly shopping haul" },
+          { id: "7652154014557097246", views: "2.8K views", label: "Closet and thrift styling" }
+        ]
+      },
+      "princess-parties": {
+        title: "Princess Parties",
+        videos: [
+          { id: "7505909339182353695", views: "115.9K views", label: "Pinned pink picnic birthday" },
+          { id: "7649133498279791903", views: "13.4K views", label: "Birthday gifts haul" },
+          { id: "7650283305430011166", views: "12.6K views", label: "Birthday feminine haul" }
+        ]
+      },
+      "girly-lifestyle": {
+        title: "Girly Lifestyle",
+        videos: [
+          { id: "7643968802933198111", views: "26.2K views", label: "Summer lifestyle haul" },
+          { id: "7621332280509828383", views: "24.7K views", label: "Spring dresses lifestyle" },
+          { id: "7652533132226317599", views: "10.6K views", label: "Princess pajama routine" }
+        ]
+      },
+      "closet-color-stories": {
+        title: "Closet Color Stories",
+        videos: [
+          { id: "7652154014557097246", views: "2.8K views", label: "Closet dress combinations" },
+          { id: "7651787353052187918", views: "12.5K views", label: "Pink tops and outfit palette" },
+          { id: "7646958464853396767", views: "12.7K views", label: "Summer palette dress picks" }
+        ]
+      },
+      "orlando-vlog-notes": {
+        title: "Orlando Vlog Notes",
+        videos: [
+          { id: "7505909339182353695", views: "115.9K views", label: "Garden picnic day vlog" },
+          { id: "7649017727415373087", views: "1.2K views", label: "Creator day style note" },
+          { id: "7646166981535599903", views: "2.6K views", label: "Outings and shopping notes" }
+        ]
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const topicKey = params.get("topic") || "dress-diaries";
+    const topic = topicData[topicKey] || topicData["dress-diaries"];
+
+    document.getElementById("topic-title").textContent = topic.title + " Videos";
+
+    const grid = document.getElementById("video-grid");
+    topic.videos.forEach((video) => {
+      const card = document.createElement("article");
+      card.className = "video-card";
+      card.innerHTML = `
+        <p class="video-meta">${video.label} • ${video.views}</p>
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@gabbybrownr/video/${video.id}"
+          data-video-id="${video.id}"
+          style="max-width: 605px; min-width: 325px;"
+        >
+          <section>
+            <a target="_blank" rel="noopener" href="https://www.tiktok.com/@gabbybrownr/video/${video.id}">
+              Open on TikTok
+            </a>
+          </section>
+        </blockquote>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
+  <script async src="https://www.tiktok.com/embed.js"></script>
+</body>
+</html>

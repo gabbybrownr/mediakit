@@ -193,6 +193,25 @@ main {
   padding: clamp(22px, 4vw, 40px);
 }
 
+.feature-strip {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  background: var(--glass);
+  box-shadow: var(--shadow);
+  padding: 12px;
+  overflow: hidden;
+}
+
+.feature-strip img {
+  display: block;
+  width: 100%;
+  height: clamp(170px, 24vw, 300px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: calc(var(--radius-lg) - 2px);
+  border: 1px solid var(--pink-200);
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1.35fr 1fr;
@@ -481,13 +500,14 @@ li {
   display: grid;
   grid-template-columns: minmax(260px, 0.9fr) minmax(380px, 1.6fr);
   gap: 12px;
+  padding: clamp(16px, 2.8vw, 24px);
 }
 
 .story-panel {
   border-radius: var(--radius-lg);
   border: 1px solid var(--pink-200);
   background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  padding: 14px;
 }
 
 .quote {
@@ -511,44 +531,58 @@ li {
 }
 
 .signature-panel h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 3.4vw, 2.35rem);
+  margin-bottom: 8px;
 }
 
 .story-series {
   grid-column: 1 / -1;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .series-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 8px;
 }
 
 .series-item {
+  display: block;
   border: 1px solid var(--pink-200);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.84);
-  padding: 14px;
+  padding: 12px;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.series-item:hover,
+.series-item:focus-visible {
+  transform: translateY(-1px);
+  border-color: var(--pink-300);
+  box-shadow: 0 10px 20px rgba(194, 98, 140, 0.16);
 }
 
 .series-id {
   color: var(--pink-500);
   font-weight: 800;
   letter-spacing: 0.08em;
-  font-size: 0.78rem;
-  margin-bottom: 6px;
+  font-size: 0.72rem;
+  margin-bottom: 4px;
 }
 
 .series-item h4 {
   font-family: "Playfair Display", serif;
   color: var(--rose-title);
-  font-size: 1.22rem;
-  margin-bottom: 6px;
+  font-size: 1.02rem;
+  margin-bottom: 4px;
 }
 
 .series-item p {
   color: var(--ink-700);
+  font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 .signature-panel ul {
