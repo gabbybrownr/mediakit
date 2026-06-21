@@ -373,21 +373,27 @@ main {
 
 .about-collage {
   grid-column: 1 / -1;
-  max-width: 760px;
-  width: min(760px, 92%);
+  max-width: 640px;
+  width: min(640px, 88%);
   margin: 0 auto;
   border: 1px solid var(--pink-200);
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.84);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .about-collage img {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: 340px;
   object-fit: contain;
+  margin: 0 auto;
 }
 
 .hero-about .card-label {
