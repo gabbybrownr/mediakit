@@ -180,19 +180,17 @@
     const topicData = {
       "haul-videos": {
         kicker: "Haul Videos",
-        title: "Top 10 Haul Videos",
-        desc: "Top haul picks with direct TikTok player embeds.",
+        title: "Featured Haul & Lifestyle References",
+        desc: "Curated TikTok references for try-ons, home decor, thrifting, and makeup.",
         videos: [
-          { id: "7504461138743119135", views: 638600, label: "Birthday dress haul Pt. 3" },
-          { id: "7505909339182353695", views: 115900, label: "Garden picnic birthday haul" },
-          { id: "7643968802933198111", views: 26200, label: "Summer SHEIN haul" },
-          { id: "7621332280509828383", views: 24700, label: "Spring dresses haul" },
-          { id: "7649133498279791903", views: 13400, label: "SHEIN birthday gifts haul" },
-          { id: "7646958464853396767", views: 12700, label: "SHEIN vacation dress haul" },
-          { id: "7650283305430011166", views: 12600, label: "Feminine birthday haul" },
-          { id: "7651787353052187918", views: 12500, label: "Pink top haul styling" },
-          { id: "7644321950008970527", views: 10400, label: "GlowMode sets haul" },
-          { id: "7647699747846802719", views: 10200, label: "LaceMade princess haul" }
+          { url: "https://www.tiktok.com/t/ZP8sWnEpM/", label: "Try on hauls", featured: true },
+          { url: "https://www.tiktok.com/t/ZP8s71rYQ/", label: "Try on hauls" },
+          { url: "https://www.tiktok.com/t/ZP8sWWRpN/", label: "Home Decor Videos" },
+          { url: "https://www.tiktok.com/t/ZP8sW4n9t/", label: "Home Decor Videos" },
+          { url: "https://www.tiktok.com/t/ZP8sWsSBb/", label: "Thrifting Videos" },
+          { url: "https://www.tiktok.com/t/ZP8sWGocT/", label: "Thrifting Videos" },
+          { url: "https://www.tiktok.com/t/ZP8sWE9Nn/", label: "Makeup" },
+          { url: "https://www.tiktok.com/t/ZP8sWon7o/", label: "Makeup" }
         ]
       },
       "product-stories": {
@@ -233,13 +231,12 @@
     document.getElementById("topic-desc").textContent = topic.desc;
 
     const grid = document.getElementById("video-grid");
-    topic.videos
-      .sort((a, b) => b.views - a.views)
-      .slice(0, 10)
-      .forEach((video) => {
+    topic.videos.slice(0, 10).forEach((video) => {
+      const card = document.createElement("article");
+      card.className = "video-card";
+
+      if (video.id) {
         const url = `https://www.tiktok.com/@gabbybrownr/video/${video.id}`;
-        const card = document.createElement("article");
-        card.className = "video-card";
         card.innerHTML = `
           <p class="video-meta">${video.label} • ${formatViews(video.views)}</p>
           <div class="video-frame-wrap">
@@ -254,8 +251,19 @@
           </div>
           <a class="video-link" href="${url}" target="_blank" rel="noopener">Open on TikTok</a>
         `;
-        grid.appendChild(card);
-      });
+      } else {
+        const featuredTag = video.featured ? " ⭐" : "";
+        card.innerHTML = `
+          <p class="video-meta">${video.label}${featuredTag}</p>
+          <div class="video-frame-wrap" style="display:flex;align-items:center;justify-content:center;aspect-ratio:9/16;background:linear-gradient(180deg,#ffdce8,#fff6fa);color:#8e4d70;font-weight:700;text-align:center;padding:14px;">
+            TikTok reference link
+          </div>
+          <a class="video-link" href="${video.url}" target="_blank" rel="noopener">Open on TikTok</a>
+        `;
+      }
+
+      grid.appendChild(card);
+    });
   </script>
 </body>
 </html>
