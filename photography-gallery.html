@@ -209,56 +209,45 @@
 
   <script>
     const imageFiles = [
-      "femenine-table.jpg",
-      "gabby-beach.jpg",
-      "gabby-bike.jpg",
-      "gabby-birthday-picnic-cake.jpg",
-      "gabby-blue-dress.jpg",
-      "gabby-blush-dress-garden-walk.jpg",
-      "gabby-book-horizontal.jpg",
-      "gabby-camera.jpg",
-      "gabby-flowers.jpg",
-      "gabby-garden.jpg",
-      "gabby-garden-floral-portrait.jpg",
-      "gabby-jewelry.jpg",
-      "gabby-photography-portada.jpg",
-      "gabby-picnic-table.jpg",
-      "gabby-pink-bolso.jpg",
-      "gabby-pink-dress.jpg",
-      "gabby-services-collage.png",
-      "gabby-sit.jpg",
-      "gabby-watch.jpg"
+      { file: "femenine-table.jpg",               label: "Birthday Table" },
+      { file: "gabby-beach.jpg",                   label: "Beach Photos" },
+      { file: "gabby-bike.jpg",                    label: "Pink Bike" },
+      { file: "gabby-birthday-picnic-cake.jpg",    label: "Birthday Dress" },
+      { file: "gabby-blue-dress.jpg",              label: "Summer Dress" },
+      { file: "gabby-blush-dress-garden-walk.jpg", label: "Disney Outfit" },
+      { file: "gabby-book-horizontal.jpg",         label: "Fairy Core" },
+      { file: "gabby-camera.jpg",                  label: "Summer" },
+      { file: "gabby-flowers.jpg",                 label: "Garden" },
+      { file: "gabby-garden.jpg",                  label: "Fairy Core" },
+      { file: "gabby-garden-floral-portrait.jpg",  label: "Princess Dress" },
+      { file: "gabby-jewelry.jpg",                 label: "Jewelry" },
+      { file: "gabby-photography-portada.jpg",     label: "Fairy Core" },
+      { file: "gabby-picnic-table.jpg",            label: "Picnic Table" },
+      { file: "gabby-pink-bolso.jpg",              label: "Pink Purse" },
+      { file: "gabby-pink-dress.jpg",              label: "Cottage Core" },
+      { file: "gabby-sit.jpg",                     label: "Garden" },
+      { file: "gabby-watch.jpg",                   label: "Jewelry" },
     ];
-
-    function humanizeName(fileName) {
-      return fileName
-        .replace(/\.[a-z0-9]+$/i, "")
-        .replace(/[-_]+/g, " ")
-        .replace(/\bgabby\b/gi, "Gabby")
-        .replace(/\bfemenine\b/gi, "Feminine")
-        .replace(/\b\w/g, (m) => m.toUpperCase());
-    }
 
     const gallery = document.getElementById("gallery");
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightbox-image");
     const lightboxCaption = document.getElementById("lightbox-caption");
 
-    imageFiles.forEach((file) => {
-      const title = humanizeName(file);
+    imageFiles.forEach(({ file, label }) => {
       const card = document.createElement("button");
       card.type = "button";
       card.className = "photo-tile";
-      card.setAttribute("aria-label", "Open " + title);
+      card.setAttribute("aria-label", "Open " + label);
       card.innerHTML = `
-        <img src="images/${file}" alt="${title}" loading="lazy" decoding="async">
-        <p class="tile-name">${title}</p>
+        <img src="images/${file}" alt="${label}" loading="lazy" decoding="async">
+        <p class="tile-name">${label}</p>
       `;
 
       card.addEventListener("click", () => {
         lightboxImage.src = `images/${file}`;
-        lightboxImage.alt = title;
-        lightboxCaption.textContent = title;
+        lightboxImage.alt = label;
+        lightboxCaption.textContent = label;
         lightbox.classList.add("open");
         lightbox.setAttribute("aria-hidden", "false");
       });
