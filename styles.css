@@ -373,8 +373,8 @@ main {
 
 .about-collage {
   grid-column: 1 / -1;
-  max-width: 900px;
-  width: 100%;
+  max-width: 760px;
+  width: min(760px, 92%);
   margin: 0 auto;
   border: 1px solid var(--pink-200);
   border-radius: var(--radius-lg);
@@ -386,6 +386,8 @@ main {
   display: block;
   width: 100%;
   height: auto;
+  max-height: 420px;
+  object-fit: contain;
 }
 
 .hero-about .card-label {
