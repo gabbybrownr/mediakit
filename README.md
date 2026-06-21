@@ -1,4 +1,4 @@
-# Gabby Brown ✿ Personal Website
+# Gabby Brown ✿ Media Kit
 
 A beautiful feminine [pink personal website](https://gabbybrownr.github.io/mediakit/) for Gabby Brown - Orlando content creator.
 
